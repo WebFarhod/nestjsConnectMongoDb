@@ -22,7 +22,6 @@ export class UsersController {
   @Post('create')
   @UsePipes(new ValidationPipe())
   createUser(@Body() createUserDto: CreateuserDto) {
-    console.log(createUserDto);
     return this.usersService.createUser(createUserDto);
   }
 
