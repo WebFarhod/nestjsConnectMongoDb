@@ -7,5 +7,5 @@ export class CreateuserDto {
 
   @IsString()
   @IsOptional()
-  displayname?: string;
+  displayName?: string;
 }
