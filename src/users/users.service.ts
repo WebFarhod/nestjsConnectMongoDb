@@ -29,11 +29,11 @@ export class UsersService {
   }
 
   getUsers() {
-    return this.userModel.find();
+    return this.userModel.find().populate('settings');
   }
 
   getUserById(id: string) {
-    return this.userModel.findById(id);
+    return this.userModel.findById(id).populate('settings');
   }
 
   updateUser(id: string, updateUserDto: UpdateUserDto) {
